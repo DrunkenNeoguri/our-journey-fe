@@ -22,13 +22,13 @@ export interface Carousel {
 
 export default function BannerCarousel(props: Props) {
   const { data } = props;
-  const { currentId, setCurrentId } = useChangeCarousel(data);
+  const { currentId } = useChangeCarousel(data);
 
   return (
     <div className={s.carouselWrapper}>
       <div className={s.carouselContainer}>
         {data.map((banner) => (
-          <CarouselCard key={banner.bannerId} {...banner} />
+          <CarouselCard key={`banner-${banner.bannerId}`} {...banner} />
         ))}
       </div>
       <div className={s.orderDotBox}>
@@ -47,7 +47,7 @@ function CarouselCard(props: Carousel) {
       <img alt="" src={src} className={s.carouselImg} loading="lazy" />
       <div className={s.carouselDescription}>
         <h3 className={s.carouselTitle}>{title}</h3>
-        <Chip chipList={chipText} />
+        <Chip key={`${chipText.join()}`} chipList={chipText} />
       </div>
     </Link>
   );
