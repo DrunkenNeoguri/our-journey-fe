@@ -1,0 +1,71 @@
+@import '/src/styles/index';
+
+.categoryListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.categoryLabelArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.categoryLabelBox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.categoryLabel {
+  @include semibold-body;
+  line-height: 20px;
+  color: $white;
+  padding: 10px 0;
+}
+
+.categoryAllLink {
+  @include regular-footnote;
+  color: $gray-300;
+  text-decoration-line: none;
+}
+
+.categoryGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.categoryLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.6923076;
+  border-radius: 4px;
+  text-decoration-line: none;
+  overflow: hidden;
+}
+
+.categoryLinkText {
+  @include semibold-sub-headline;
+  line-height: 18px;
+  position: absolute;
+  z-index: 10;
+  color: $white;
+  bottom: 8px;
+}
+
+.categoryImg {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  border-radius: 4px;
+}
