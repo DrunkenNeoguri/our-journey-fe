@@ -22,11 +22,15 @@ export interface Carousel {
 
 export default function BannerCarousel(props: Props) {
   const { data } = props;
-  const { currentId } = useChangeCarousel(data);
+  const { currentId, carouselContainerRef } = useChangeCarousel(data);
+
+  if (!data) {
+    return <div />;
+  }
 
   return (
     <div className={s.carouselWrapper}>
-      <div className={s.carouselContainer}>
+      <div className={s.carouselContainer} ref={carouselContainerRef}>
         {data.map((banner) => (
           <CarouselCard key={`banner-${banner.bannerId}`} {...banner} />
         ))}

@@ -8,7 +8,8 @@
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  aspect-ratio: 1 / 0.789634146;
+  height: 259px;
+  // aspect-ratio: 1 / 0.789634146;
   margin-top: 10px;
   border-radius: 4px;
   overflow: auto;
@@ -24,8 +25,9 @@
   align-items: center;
   position: relative;
   width: 100%;
+  height: 259px;
   min-width: 100%;
-  aspect-ratio: 1 / 0.789634146;
+  // aspect-ratio: 1 / 0.789634146;
   border-radius: 4px;
   text-decoration-line: none;
   scroll-snap-align: start;
