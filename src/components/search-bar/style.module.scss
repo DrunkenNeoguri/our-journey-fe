@@ -18,8 +18,11 @@
   position: fixed;
   z-index: 90;
   top: 0;
-  &.header {
+  transition: background 0.2s ease;
+
+  &.active {
     background: $background-system;
+    transition: background 0.2s ease;
   }
 }
 
