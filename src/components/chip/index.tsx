@@ -14,16 +14,10 @@ const Chip = React.memo((props: Props) => {
   return (
     <div className={s.chipBox}>
       {chipList.map((chip, index) => (
-        <>
-          <span key={`${key}${chip}`} className={s.chipText}>
-            {`#${chip}`}
-          </span>
-          {chipList.length - 1 > index && (
-            <span key={`${key}${chip}${index}`} className={`${s.chipText} ${s.dot}`}>
-              ·
-            </span>
-          )}
-        </>
+        <React.Fragment key={`${key}${chip}`}>
+          <span className={s.chipText}>{`#${chip}`}</span>
+          {chipList.length - 1 > index && <span className={`${s.chipText} ${s.dot}`}>·</span>}
+        </React.Fragment>
       ))}
     </div>
   );
