@@ -1,0 +1,131 @@
+@import '@/styles';
+
+.threadWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 15px;
+  border-left: 1px solid $gray-700;
+}
+
+.profileArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+
+.profileThumbnail {
+  width: 20px;
+  height: 20px;
+}
+
+.profileName {
+  @include regular-caption-1;
+  color: $white;
+}
+
+.optionButton {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.optionMenuBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 10;
+  filter: drop-shadow(0px 0px 32px rgba(0, 0, 0, 0.2));
+  width: 200px;
+  border-radius: 12px;
+  right: 0;
+  margin-top: 16px;
+}
+
+.optionMenuButton {
+  display: flex;
+  justify-content: flex-start;
+  padding: 13px 16px;
+  margin: 0;
+
+  width: 200px;
+  background: #b3b3b3;
+  opacity: 0.82;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  color: $gray-900;
+  @include regular-sub-headline;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+
+  transition: ease-in-out 0.5s ease;
+
+  &.top {
+    border-radius: 12px 12px 0 0;
+    border-top: 0.5px solid #d1d1d1;
+  }
+
+  &.bottom {
+    border-radius: 0 0 12px 12px;
+    border-bottom: 0.5px solid #d1d1d1;
+  }
+
+  &:hover {
+    background: $gray-50;
+    opacity: 1;
+  }
+}
+
+.thumbnailBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 0.6578947;
+  border-radius: 4px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.description {
+  @include regular-footnote;
+  line-height: 16px;
+  color: #eeeeee;
+  white-space: pre-wrap;
+}
+
+.hashtagList {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.hashtag {
+  @include regular-footnote;
+  line-height: 16px;
+
+  color: $blue-500;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
